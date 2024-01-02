@@ -17,9 +17,11 @@ class About (models.Model):
     email = models.CharField(max_length=40)
     phone = models.IntegerField(blank=True, help_text='Contact phone number')
     image = models.ImageField(upload_to='about/')
+    aboutme = models.TextField(max_length=20000)
+
+class Skill (models.Model):
     skill = models.CharField(max_length=15)
     percentage = models.IntegerField()
-    aboutme = models.TextField(max_length=20000)
 
 
 class Service (models.Model):
