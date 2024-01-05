@@ -47,6 +47,7 @@ class Blog (models.Model):
     text = models.CharField(max_length=100)
     subtitle = models.CharField(max_length=500)
     author = models.ForeignKey(User, related_name ='blog_author', on_delete = models.CASCADE)
+    auth_image = models.ImageField(upload_to='auth/')
 
 
 
